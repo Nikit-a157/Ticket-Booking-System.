@@ -1,0 +1,24 @@
+
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: ticketuser
+      POSTGRES_PASSWORD: ticketpassword
+      POSTGRES_DB: userdb
+    ports:
+      - "5432:5432"
+
+  postgres-booking:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: bookinguser
+      POSTGRES_PASSWORD: bookingpassword
+      POSTGRES_DB: bookingdb
+    ports:
+      - "5433:5432"
+
+  kafka:
+    image: confluentinc/confluent-local:7.5.0
+    ports:
+      - "9092:9092"

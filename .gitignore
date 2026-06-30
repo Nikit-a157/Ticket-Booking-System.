@@ -1,0 +1,42 @@
+--- IDE and Editor Settings ---
+
+.idea/
+.vscode/
+*.iml
+*.sublime-project
+*.sublime-workspace
+.metadata/
+
+--- Operating System Files ---
+
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+--- Java / Maven / Build ---
+
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+*.tmp
+!.mvn/wrapper/maven-wrapper.jar
+
+--- Node.js / React Frontend ---
+
+node_modules/
+dist/
+dist-ssr/
+build/
+coverage/
+.local
+.env
+.env.
+!.env.example
+
+--- Docker & Microservices ---
+db-data/
+secrets/

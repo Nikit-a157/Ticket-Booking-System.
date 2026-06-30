@@ -1,0 +1,29 @@
+server:
+  port: 8090
+
+spring:
+  cloud:
+    config:
+      enabled: false
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowed-origins: "http://localhost:5173"
+            allowed-methods: GET, POST, PUT, DELETE, OPTIONS
+            allowed-headers: "*"
+            allow-credentials: true
+      routes:
+
+        - id: booking-service
+          uri: http://localhost:8081
+          predicates:
+ 
+            - Path=/book, /book/**
+
+        
+        - id: user-service
+          uri: http://localhost:8080
+          predicates:
+
+            - Path=/register, /register/**, /users, /users/**
